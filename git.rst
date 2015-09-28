@@ -88,3 +88,7 @@ Push an existing repository to a new (empty) remote repository::
     cd path/to/project
     git remote add origin <remote_address>:path/to/remote/project
     git push -u origin master
+
+Revert a commit (creates a new commit)::
+
+    git revert <commit_id>

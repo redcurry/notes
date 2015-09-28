@@ -1,6 +1,8 @@
 Delete remote branch::
 
     git push origin :[remote_branch]
+    -or-
+    git push origin --delete <branchName>
 
 Cancel merge::
 

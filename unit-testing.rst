@@ -45,3 +45,34 @@ in order to obtain feedback from real users.
 On an existing system, start by automating the build and deployment
 processes. Then start testing the simplest path through the system,
 and move on to the more complicated code.
+
+Chapter 5
+---------
+
+Write the acceptance test using the language of the application's domain
+(not technologies, like databases).
+
+Separate unit & integration tests, which should pass on every build,
+from acceptance tests, which should pass when a feature is completed.
+
+Start testing the successful path, not cases that are supposed to fail,
+but write down those cases while coding to test later.
+
+Write a test clearly, as if the code to write it already exists,
+then build the supporting code to make the test pass.
+
+Don't starting writing a feature by writing (and unit-testing) the domain model;
+start by going through the inputs (e.g., a mouse click) until they arrive
+at the model, and then follow the path to the output.
+
+Unit-test a feature's behavior, not every method and all paths of the code.
+Testing a feature would test the collaborations between objects,
+which helps us to understand the roles of those classes.
+
+If writing the next test is difficult, it is a sign that the software design
+needs to be improved, so refactor until the test becomes easy to write.
+
+Can't test everything up-front, but it's important to think about
+the testing strategy. For example, important logic may need be tested more,
+unhandled exceptions may need more integration testing, and
+system failures may need more thorough testing.

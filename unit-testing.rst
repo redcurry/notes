@@ -76,3 +76,31 @@ Can't test everything up-front, but it's important to think about
 the testing strategy. For example, important logic may need be tested more,
 unhandled exceptions may need more integration testing, and
 system failures may need more thorough testing.
+
+Chapter 6
+---------
+
+Separate groups of code by how much the groups may change for the same reasons
+(i.e., code that changes for the same reasons belong together).
+
+True encapsulation ensures that an object's behavior is only affected
+by its API, not by other object dependencies.
+
+Don't expose too much of an object's internals through its API
+or objects that use it may end up doing some of its work.
+
+One should be able to describe what an object does without using
+"ands" or "ors." If so, break up the object.
+
+When creating a new object, pass in all its dependencies through the
+constructor, don't do it later with properties.
+
+Notifications and adjustments don't have to be passed to the constructor,
+as defaults may be created and then changed later.
+
+The API of an object should not be more complicated than that
+of its components.
+
+Objects should be context-independent; that is, not know
+about the system in which it executes, passing it the context
+through a constructor or methods.

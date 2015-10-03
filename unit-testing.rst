@@ -104,3 +104,58 @@ of its components.
 Objects should be context-independent; that is, not know
 about the system in which it executes, passing it the context
 through a constructor or methods.
+
+Chapter 7
+---------
+
+TDD helps with design by (1) describing the *what*, not the how,
+(2) keeping objects small and focused (because tests should be short),
+and (3) keeping objects independent (because we have to explicitly
+send the dependencies by testing).
+
+Communication patterns between objects are more important
+than their internal structure.
+
+"An interface describes whether two components will fit together,
+while a protocol describes whether they will work together."
+(Communication protocols are typically implicit because the language
+does not support defining object relationships.)
+
+Mock an object's peers---dependencies, notification, or adjustments---
+not its internals. Such tests help decide whether they really are peers.
+
+Define types for all domain concepts, even if they're value types,
+like String (immutable). It makes finding them easier and allows for better
+object-oriented design in case behavior needs to be added.
+
+How to introduce a value type: break up complex code, introduce a
+placeholder type that wraps a single field and add more fields or methods,
+and group types that are used together so as to hide them behind an interface.
+
+For objects, follow similar principles as above. Start by breaking up
+an abojcet if it's too large to test easily. Unit-test those parts separately.
+
+When we discover that an object requires a service, implement
+its interface and mock it out in a unit test. Then implement the class
+that provides the service and discover what services it needs, and so on.
+
+Clusters of related objects that work together should be packaged
+into a containing object---"composite simpler than the sum of its parts."
+
+An interface and its single implementation shouldn't be named almost the same.
+There must be something specific about the implementation
+that can be included in the class name; otherwise, it may mean
+that the interface is poorly named or designed---it may have too many responsibilities.
+
+Classes are an implementation detail---a way to implement types,
+not the types themselves, which are interfaces.
+
+Chapter 8
+---------
+
+Don't mock third-party APIs. Instead, write an adapter layer based on
+what our objects need and in our domain language. Test this layer
+with integration tests to understand how the third-party library works.
+
+Some third-party value types may be used directly, but often
+we need to translate them to the application domain.

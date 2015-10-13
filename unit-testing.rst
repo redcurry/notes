@@ -159,3 +159,14 @@ with integration tests to understand how the third-party library works.
 
 Some third-party value types may be used directly, but often
 we need to translate them to the application domain.
+
+Part III
+--------
+
+Page 112 - "Start with the outside event that triggers the behavior
+we want to implement and work out way into the code an object at a time,
+until we reach a visible effect (such as a sent message or log entry)
+indicating that we've achieved our goal."
+
+Page 112 - We can't test all configuration options in an entire system,
+but we can exercise it as much and as early as possible

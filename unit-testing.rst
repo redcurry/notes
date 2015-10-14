@@ -169,4 +169,10 @@ until we reach a visible effect (such as a sent message or log entry)
 indicating that we've achieved our goal."
 
 Page 112 - We can't test all configuration options in an entire system,
-but we can exercise it as much and as early as possible
+but we can exercise it as much and as early as possible.
+
+See page 117 for an example of how to break up responsibilities between classes.
+
+Page 136 - Create a "null implementation" of a class (like a stub)
+while writing tests so that the program compiles and you can continue
+testing other things.

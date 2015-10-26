@@ -94,3 +94,11 @@ Push an existing repository to a new (empty) remote repository::
 Revert a commit (creates a new commit)::
 
     git revert <commit_id>
+
+Move a directory to a new repository (preserve history),
+obtained from http://gbayer.com/development/moving-files-from-one-git-repository-to-another-preserving-history/
+
+    git clone <git repository A url>
+    cd <new git repository>
+    git remote rm origin
+    git filter-branch --subdirectory-filter <directory 1> -- --all

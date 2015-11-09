@@ -38,6 +38,10 @@ Search code in history::
     git grep <regexp> $(git rev-list <rev1>..<rev2>)
     -or-
     git grep <regexp> $(git rev-list --all)
+    
+Show an old version of a file::
+
+    git show REVISION:path/to/file
 
 Merge a repository into another (works for merging into empty repo);
 project-a to project-b::

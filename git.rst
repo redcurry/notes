@@ -106,3 +106,7 @@ obtained from http://gbayer.com/development/moving-files-from-one-git-repository
     cd <new git repository>
     git remote rm origin
     git filter-branch --subdirectory-filter <directory 1> -- --all
+
+Move branch pointer to another commit::
+
+    git branch -f branch-name new-tip-commit

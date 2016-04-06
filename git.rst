@@ -110,3 +110,7 @@ obtained from http://gbayer.com/development/moving-files-from-one-git-repository
 Move branch pointer to another commit::
 
     git branch -f branch-name new-tip-commit
+
+Rename current branch::
+
+    git branch -m <new-name>

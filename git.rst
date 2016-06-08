@@ -114,3 +114,9 @@ Move branch pointer to another commit::
 Rename current branch::
 
     git branch -m <new-name>
+
+Stash a single file::
+
+    (First, add the files you don't want to stash.)
+    git stash --keep-index
+    (Now, if you want, un-add the files you added.)

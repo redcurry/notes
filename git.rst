@@ -79,7 +79,8 @@ Cherry pick::
     git cherry-pick <commit_id>    # on branch to apply commits
     -or-
     git cherry-pick <commit_id1>..<commit_id2>    # apply a range of commits
-                                                    (didn’t work)
+                                                    (excludes commit_id1)
+    git cherry-pick ..<commit_id>  # apply changes since HEAD to commit_id
 
 Find most recent common ancestor between two branches::
 
